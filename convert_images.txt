@@ -1,0 +1,12 @@
+for myFile in *.png; do magick convert -units PixelsPerInch -density 100 "$myFile" "converted$myFile"; done
+
+rm *.png
+
+for myFile in *.png.c; do mv "$myFile" "${myFile%.*}"; done
+
+
+
+
+for myFile in *.png; do echo "$myFile" "converted$myFile"; done
+
+
